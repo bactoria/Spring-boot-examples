@@ -1,0 +1,23 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "me.bactoria.HolomanProperties",
+      "name": "holoman",
+      "type": "me.bactoria.HolomanProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "me.bactoria.HolomanProperties",
+      "name": "holoman.how-long",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "me.bactoria.HolomanProperties",
+      "defaultValue": "This is Default properties",
+      "name": "holoman.name",
+      "type": "java.lang.String"
+    }
+  ]
+}

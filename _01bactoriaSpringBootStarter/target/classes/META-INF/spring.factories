@@ -1,0 +1,6 @@
+
+# @EnableAutoConfiguration 어노테이션이 있으면
+# me.bactoria.HolomanConfiguration 을 읽어주세요~!
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  me.bactoria.HolomanConfiguration
+

@@ -1,0 +1,34 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "me.bactoria.BactoriaProperties",
+      "name": "bactoria",
+      "type": "me.bactoria.BactoriaProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "me.bactoria.BactoriaProperties",
+      "defaultValue": 0,
+      "name": "bactoria.age",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "me.bactoria.BactoriaProperties",
+      "name": "bactoria.full-name",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "me.bactoria.BactoriaProperties",
+      "name": "bactoria.name",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "me.bactoria.BactoriaProperties",
+      "defaultValue": "30s",
+      "name": "bactoria.session-timeout",
+      "type": "java.time.Duration"
+    }
+  ]
+}

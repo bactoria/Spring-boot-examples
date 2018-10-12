@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--메이븐 배포할때 쓰이는거임. 필요음슴.-->
+    <groupId>me.bactoria</groupId>
+    <artifactId>inflearn01-spring-boot-getting-started</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <!-- Inherit defaults from Spring Boot -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.3.RELEASE</version>
+    </parent>
+
+
+    <!-- parent(spring-boot-starter-parent)의 parent(spring-boot-dependencies)의
+           properties에  버전이 명시되어 있음.
+           스프링부트에서 관리해주는 버전이 아닌 다른 버전이 필요하다면
+           아래와 같이 버전을 명시해주면 된다. -->
+    <properties>
+        <h2.version>1.4.197</h2.version>
+        <spring.version>5.0.6.RELEASE</spring.version>
+    </properties>
+
+    <!-- Add typical dependencies for a web application -->
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!--Custom AutoConfiguration-->
+        <!--bactoriaSpringBootStarter 폴더를 npm install 해야 함.-->
+        <dependency>
+            <groupId>me.bactoria</groupId>
+            <artifactId>bactoria-spring-boot-starter</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+
+    </dependencies>
+
+    <!-- Package as an executable jar -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
