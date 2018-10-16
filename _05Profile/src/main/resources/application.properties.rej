@@ -1,0 +1,8 @@
+diff a/_05Profile/src/main/resources/application.properties b/_05Profile/src/main/resources/application.properties	(rejected hunks)
+@@ -1,6 +1,5 @@
+ bactoria.name = junoh
+ 
+-
+ # ProdConfiguration�� ������ ����Ѵ�. ������ @profile("prod") �̱� ����.
+ spring.profiles.active=prod
+ 
