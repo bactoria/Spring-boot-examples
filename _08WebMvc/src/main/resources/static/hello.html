@@ -1,0 +1,26 @@
+<!--
+첫 페이지 로딩시 200 반환.
+웹브라우저 F5 누르면 304 반환.
+
+hello.html 내용 수정하고 Builde 후
+웹브라우저 F5 누르면 200 반환.
+
+이유는?
+
+Request 할 때
+If-Modified-Since 에서 파일이 마지막으로 변경된 시간을 같이 보냄.
+
+만약 현재 resource의 시간이 같이면 다시 보낼 필요가 없음. 왜냐? 니가 지금 보는거랑 똑같은건데 왜 다시보내?
+
+resource가 변경되었다면 response의 Last-Modified 시간이 If-Modified-Since보다 나중일 거임.
+그러면 리소스 보내줌.
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</html>
+<body>
+Hello Static Resource AHAHAAA
+</body>
+</html>
