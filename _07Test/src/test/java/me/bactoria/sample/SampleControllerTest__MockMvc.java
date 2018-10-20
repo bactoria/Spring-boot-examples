@@ -30,7 +30,18 @@ Mock up이 된 서블릿에 인터랙션을 하려면
 MockMvc 라는 클라이언트를 사용해야 한다.
 */
 
-@RunWith(SpringRunner.class)
+/* @RunWith(SpringRunner.class)
+*
+* SpringRunner.class는 SpringJUnit4ClassRunner.class를 상속받음
+*
+* @SpringBootTest를 사용하기 위해서 꼭 붙여줘야 함.
+* */
+
+/*
+* @SpringBootTest 는 빈을 모두 로드함. App 규모가 클수록 테스트가 느려짐.
+* */
+
+@RunWith(SpringRunner.class) // JUnit에 내장된 Runner 대신 SpringRunner.class를 사용할게요.
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK) //==@SpringBootTest
 @AutoConfigureMockMvc
 public class SampleControllerTest__MockMvc {
