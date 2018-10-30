@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<!-- xmlns:th="http://www.thymeleaf.org" 추가해줘야 함. -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Hello</h1>
+
+<!-- model에 name 이 없을 경우에, 이름 없음. 이라고 출력함. -->
+<span th:text="${name}">이름 없음.</span>
+</body>
+</html>
