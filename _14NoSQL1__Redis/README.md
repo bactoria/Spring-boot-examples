@@ -6,7 +6,13 @@ accounts의 정보들을 저장하기 위해 `hash`를 씀.
 
 ![image](https://user-images.githubusercontent.com/25674959/51247959-00dfbc00-19d2-11e9-8a17-70bf1e17f322.png)
 
+&nbsp;
+
 ![image](https://user-images.githubusercontent.com/25674959/51247953-fc1b0800-19d1-11e9-9bb8-2157f79e227a.png)
+
+&nbsp;
+
+**결과**
 
 ![image](https://user-images.githubusercontent.com/25674959/51247932-edccec00-19d1-11e9-8a53-1b945a4323a4.png)
 
