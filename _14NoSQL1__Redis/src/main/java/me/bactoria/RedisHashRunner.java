@@ -20,9 +20,10 @@ public class RedisHashRunner implements ApplicationRunner {
         account.setUsername("bactoria");
         account.setPassword("pass123");
 
+        accountRepository.save(account); // hset
+
         System.out.println("Befor save : " + account.getId()); //null
 
-        accountRepository.save(account);
 
         System.out.println("After save : " + account.getId()); // ex) 3cd3013d-84bd-437a-b63d-7b4dc94e5623
         // save하니까 account에 id가 생김..ㄷㄷ 신기

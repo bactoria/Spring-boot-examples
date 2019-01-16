@@ -20,15 +20,9 @@ public class RedisTemplateRunner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         ValueOperations<String, String> values = redisTemplate.opsForValue();
-        values.set("name","bactoria");
-        values.set("springboot","2.0");
-        values.set("hello","world");
+        values.set("name","bactoria"); // == set name bactoria
+        values.set("springboot","2.0"); // == set springboot 2.0
+        values.set("hello","world"); // == set hello world
 
-        /* redis cli 명령어
-
-         keys *
-         get name
-
-         * */
     }
 }
