@@ -1,5 +1,6 @@
 package com.example._23_cookie;
 
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,6 +19,12 @@ public class CookieRestController {
 
         response.addCookie(cookie);
 
-        return "Did you get Cookie ?";
+        return "Did you get Cookie .";
     }
+
+    @GetMapping("/info")
+    public String info(@CookieValue(value = "id", required = true) Cookie storeIdCookie) {
+        return "You Have Cookie ! " + " name : " + storeIdCookie.getName() + "  value : " + storeIdCookie.getValue();
+    }
+
 }

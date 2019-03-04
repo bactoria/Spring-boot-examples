@@ -11,10 +11,20 @@ public class CookieRestController {
 
         response.addCookie(cookie);
 
-        return "Did you get Cookie ?";
+        return "Did you get Cookie .";
     }
 }
 ```
+
+&nbsp;
+
+### .
+
+1. http://localhost:8080/info (접속 X - 쿠키 없음)
+2. http://localhost:8080/cookie (쿠키 받기.)
+3. http://localhost:8080/info (접속 O)
+
+&nbsp;
 
 ### 쿠키 확인 (Chrome 기준)
 
