@@ -1,7 +1,10 @@
 package me.bactoria.hello;
 
 import org.springframework.hateoas.Resource;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
@@ -16,6 +19,7 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 *
 * */
 @RestController
+@RequestMapping(produces = "application/hal+json")
 public class HelloController {
 
     @GetMapping("/hello")
@@ -31,6 +35,15 @@ public class HelloController {
         // HelloController.class의 hello() method의 링크(http://도메인/hello) 를 SelfRel로 추가
 
         return helloResource;
+    }
+
+
+    @GetMapping("/hell")
+    public Resource<String> hdello() {
+
+        /*Resource 쓰려면 hateoas관련 dependency 추가해야 함*/
+        Resource<String> helloResourc = new Resource<>("asd");
+        return helloResourc;
     }
 
 }
