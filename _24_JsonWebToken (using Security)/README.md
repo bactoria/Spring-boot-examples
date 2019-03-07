@@ -9,19 +9,22 @@
 
 &nbsp;
 
-## 로그인
-
 postman 이용.
 
 &nbsp;
 
-**request**
+## 로그인
+
+
+&nbsp;
+
+### request
 
 - Method : Post
 - Url : localhost:8080/login
 - Content-Type="application/json"
 
-Body
+#### Body
 ```json
 {
     "id": "wonchul",
@@ -31,9 +34,9 @@ Body
 
 &nbsp;
 
-**response**
+### response
 
-Header
+#### Header
 ```
 jwt-header → eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVVNFUiIsImlzcyI6IndvbmNodWwiLCJpZCI6ImNvbS5leGFtcGxlLl8yNF9Kc29uV2ViVG9rZW4udXNpbmcuU2VjdXJpdHkuYXV0aC5Vc2VyRGV0YWlsc0ltcGxANWFhYzI3NTI6IFVzZXJuYW1lOiB3b25jaHVsOyBQYXNzd29yZDogW1BST1RFQ1RFRF07IEVuYWJsZWQ6IHRydWU7IEFjY291bnROb25FeHBpcmVkOiB0cnVlOyBjcmVkZW50aWFsc05vbkV4cGlyZWQ6IHRydWU7IEFjY291bnROb25Mb2NrZWQ6IHRydWU7IEdyYW50ZWQgQXV0aG9yaXRpZXM6IFVTRVIiLCJleHAiOjE1NTIwNzU3NTd9.s4w6Si1EPOWpc7JzpjFEj4BRgLJfDj6UMeXQ6l06tXo
 ```
@@ -43,13 +46,13 @@ jwt-header → eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVVNFUiIsImlzcyI6
 
 ## user 접속
 
-**request**
+### request
 
 - Method : Get
 - Url : localhost:8080/user
 - Content-Type="application/json"
 
-Header
+#### Header
 ```
 key : jwt-header
 value : eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVVNFUiIsImlzcyI6IndvbmNodWwiLCJpZCI6ImNvbS5leGFtcGxlLl8yNF9Kc29uV2ViVG9rZW4udXNpbmcuU2VjdXJpdHkuYXV0aC5Vc2VyRGV0YWlsc0ltcGxANWFhYzI3NTI6IFVzZXJuYW1lOiB3b25jaHVsOyBQYXNzd29yZDogW1BST1RFQ1RFRF07IEVuYWJsZWQ6IHRydWU7IEFjY291bnROb25FeHBpcmVkOiB0cnVlOyBjcmVkZW50aWFsc05vbkV4cGlyZWQ6IHRydWU7IEFjY291bnROb25Mb2NrZWQ6IHRydWU7IEdyYW50ZWQgQXV0aG9yaXRpZXM6IFVTRVIiLCJleHAiOjE1NTIwNzU3NTd9.s4w6Si1EPOWpc7JzpjFEj4BRgLJfDj6UMeXQ6l06tXo
@@ -58,9 +61,9 @@ value : eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVVNFUiIsImlzcyI6IndvbmN
 
 &nbsp;
 
-**response**
+### response
 
-Body
+#### Body
 ```
 I'm Jwt Token User!
 ```
@@ -70,13 +73,13 @@ I'm Jwt Token User!
 
 ## 토큰 재발행
 
-**request**
+### request
 
 - Method : Get
 - Url : localhost:8080/token
 - Content-Type="application/json"
 
-Header
+#### Header
 ```
 key : jwt-header
 value : eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVVNFUiIsImlzcyI6IndvbmNodWwiLCJpZCI6ImNvbS5leGFtcGxlLl8yNF9Kc29uV2ViVG9rZW4udXNpbmcuU2VjdXJpdHkuYXV0aC5Vc2VyRGV0YWlsc0ltcGxANWFhYzI3NTI6IFVzZXJuYW1lOiB3b25jaHVsOyBQYXNzd29yZDogW1BST1RFQ1RFRF07IEVuYWJsZWQ6IHRydWU7IEFjY291bnROb25FeHBpcmVkOiB0cnVlOyBjcmVkZW50aWFsc05vbkV4cGlyZWQ6IHRydWU7IEFjY291bnROb25Mb2NrZWQ6IHRydWU7IEdyYW50ZWQgQXV0aG9yaXRpZXM6IFVTRVIiLCJleHAiOjE1NTIwNzU3NTd9.s4w6Si1EPOWpc7JzpjFEj4BRgLJfDj6UMeXQ6l06tXo
@@ -88,8 +91,8 @@ value : eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVVNFUiIsImlzcyI6IndvbmN
 &nbsp;
 &nbsp;
 
-iat : issued at (토큰 발급 시간)  
-nbf : not before (토큰 활성 시간)   
-exp : expiration (토큰 만료 시간)  
+iat : 토큰 발급 시간 (issued at)
+nbf : 토큰 활성 시간 (not before)  
+exp : 토큰 만료 시간 (expiration)  
 
 => 토큰은 `nbf ~ exp` 까지 유효함.
