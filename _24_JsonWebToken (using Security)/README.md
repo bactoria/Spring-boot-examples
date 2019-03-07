@@ -2,15 +2,14 @@
 
 2년 전 글이긴 하지만..
 
+&nbsp;
+
 코드도 [허원철님 깃허브](https://github.com/heowc/SpringBootSample/tree/master/SpringBootSecurityJwt) 로 공부함.
 
 
+&nbsp;
 
-
-사용법
-
-
-### 로그인
+## 로그인
 
 postman 이용.
 
@@ -42,7 +41,7 @@ jwt-header → eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVVNFUiIsImlzcyI6
 &nbsp;
 &nbsp;
 
-### 확인
+## user 접속
 
 **request**
 
@@ -69,7 +68,7 @@ I'm Jwt Token User!
 &nbsp;
 &nbsp;
 
-### Refresh
+## 토큰 재발행
 
 **request**
 
@@ -89,8 +88,8 @@ value : eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVVNFUiIsImlzcyI6IndvbmN
 &nbsp;
 &nbsp;
 
-iat : issued at (토큰 발급 시간)
-nbf : not before (토큰 활성 시간) 
-exp : expiration (토큰 만료 시간)
+iat : issued at (토큰 발급 시간)  
+nbf : not before (토큰 활성 시간)   
+exp : expiration (토큰 만료 시간)  
 
 => 토큰은 `nbf ~ exp` 까지 유효함.
