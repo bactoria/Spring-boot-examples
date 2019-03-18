@@ -46,10 +46,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
+        http
+                .csrf().disable()
+
+                .authorizeRequests()
                 .antMatchers("/my").authenticated()
                 .anyRequest().permitAll()
+
                 .and().formLogin() // request의 accept 헤더가 http라서 여기서 걸림. 폼로그인 할 수 있게 폼창을 줌.
-                .and().httpBasic(); //
+                .and().httpBasic();
+
+        http.authorizeRequests().antMatchers("/h2-console/*").permitAll();
+        http.headers().frameOptions().disable();
     }
 }
