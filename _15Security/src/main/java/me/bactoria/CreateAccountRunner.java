@@ -20,11 +20,19 @@ public class CreateAccountRunner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         Account account = new Account();
-        account.setUsername("runnerUser");
-        account.setPassword(passwordEncoder.encode("pass123")); //패스워드 암호화해서 저장.
+        account.setUsername("user1");
+        account.setPassword(passwordEncoder.encode("pass")); //패스워드 암호화해서 저장.
         // => {bcrypt}$2a$10$auI7c0nB01JS6erYkLM0R.u.t1IEbkT0eSINSqixRKpFHqrO02IBy 이런식으로 변형되어서 DB에 저장됨.
 
         accountService.createAccount(account);
+
+
+        account = new Account();
+        account.setUsername("user2");
+        account.setPassword(passwordEncoder.encode("pass"));
+
+        accountService.createAccount(account);
+
 
         System.out.println("Runner is finished");
     }
