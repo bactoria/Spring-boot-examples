@@ -8,21 +8,8 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
-import javax.sql.DataSource;
-import java.sql.Connection;
 import java.sql.SQLException;
-import java.sql.Statement;
 
-// DataSource vs JdbcTemplate
-
-/*
-스프링이 제공하는 JdbcTemplate.
-
-JdbcTemplate가 코드 더 간결함.
-리소스 반납 처리 잘 되어있다.
-예외 메시지 가독성 높음.
-DataSource보다는 JdbcTemplate 추천.
-*/
 @Component
 public class H2Runner__JdbcTemplate implements ApplicationRunner {
 
