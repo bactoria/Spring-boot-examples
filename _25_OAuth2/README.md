@@ -2,6 +2,7 @@
 
 - Java 8
 - Spring Boot 2.1.3 (Oauth2, SECURITY, WEB, JPA, H2, Lombok)
+- IntelliJ (using RestClient)
 
 &nbsp;
 
