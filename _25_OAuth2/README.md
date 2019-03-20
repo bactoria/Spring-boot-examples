@@ -27,9 +27,9 @@ public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         .scopes("read_profile"); // 권한
 ```
 
-[인증하기](./src/main/java/me/bactoria/_25_OAuth2/httpRequest/1.%20Authentication%20Code%20Grant%20Type.http)
+브라우저 요청시 사용. 
 
-[Token 재발급하기](./src/main/java/me/bactoria/_25_OAuth2/httpRequest/5.%20Refresh%20Token.http)
+[인증하기](./src/main/java/me/bactoria/_25_OAuth2/httpRequest/1.%20Authentication%20Code%20Grant%20Type.http)
 
 &nbsp;
 &nbsp;
@@ -52,6 +52,8 @@ public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         .accessTokenValiditySeconds(60)
         .scopes("read_profile"); // 권한
 ```
+
+브라우저 요청시 사용. Code 발행 없음.
 
 [인증하기](./src/main/java/me/bactoria/_25_OAuth2/httpRequest/2.%20Implicit%20Grant%20Type.http)
 
@@ -77,9 +79,9 @@ public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         .scopes("read_profile"); // 권한
 ```
 
-[인증하기](./src/main/java/me/bactoria/_25_OAuth2/httpRequest/3.%20Resource%20Owner%20Password%20Credentials%20Grant%20Type.http)
+브라우저 없이 토큰 발행가능.
 
-[Token 재발급하기](./src/main/java/me/bactoria/_25_OAuth2/httpRequest/5.%20Refresh%20Token.http)
+[인증하기](./src/main/java/me/bactoria/_25_OAuth2/httpRequest/3.%20Resource%20Owner%20Password%20Credentials%20Grant%20Type.http)
 
 &nbsp;
 &nbsp;
@@ -101,6 +103,8 @@ public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         .accessTokenValiditySeconds(60)
         .scopes("read_profile"); // 권한
 ```
+
+User 정보X. Client 권한.
 
 [인증하기](./src/main/java/me/bactoria/_25_OAuth2/httpRequest/4.%20Client%20Credentials%20Grant%20Type.http)
 

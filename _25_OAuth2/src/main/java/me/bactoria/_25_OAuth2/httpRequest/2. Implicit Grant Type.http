@@ -1,12 +1,14 @@
 
-### 2. Implicit Grant Type ###
+### Implicit Grant Type ###
 
-### 2 - 1. 브라우저로 접속
+### 1. 브라우저로 접속
 http://localhost:8080/oauth/authorize?response_type=token&client_id=bactoria&redirect_uri=http://localhost:18080/callback&scope=read_profile
 
-### 2 - 2. 로그인 (user1, pass) 후 권한 승인 후 AccessToken 발급
 
-### 2 - 3. Resource 요청
+### 2. 로그인 (user1, pass) 후 권한 승인 후 AccessToken 발급
+
+
+### 3. Resource 요청
 GET http://localhost:8080/api/secret
 Authorization: Bearer ########-####-####-####-############
 
