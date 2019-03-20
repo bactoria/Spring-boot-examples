@@ -3,7 +3,9 @@
 - Java 8
 - Spring Boot 2.1.3 (Oauth2, SECURITY, WEB, JPA, H2, Lombok)
 
-## Authentication
+&nbsp;
+
+## Grant Type
 
 ### 1. Authentication code Grant Type
 
@@ -58,10 +60,6 @@ public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 
 ### 3. Resource Owner Password Credientials Grant Type
 
-[인증하기](./src/main/java/me/bactoria/_25_OAuth2/httpRequest/3.%20Resource%20Owner%20Password%20Credentials%20Grant%20Type.http)
-
-[Token 재발급하기](./src/main/java/me/bactoria/_25_OAuth2/httpRequest/5.%20Refresh%20Token.http)
-
 **AuthorizationServerConfig.class**
 ```java
 @Override
@@ -78,6 +76,10 @@ public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         .refreshTokenValiditySeconds(240)
         .scopes("read_profile"); // 권한
 ```
+
+[인증하기](./src/main/java/me/bactoria/_25_OAuth2/httpRequest/3.%20Resource%20Owner%20Password%20Credentials%20Grant%20Type.http)
+
+[Token 재발급하기](./src/main/java/me/bactoria/_25_OAuth2/httpRequest/5.%20Refresh%20Token.http)
 
 &nbsp;
 &nbsp;
