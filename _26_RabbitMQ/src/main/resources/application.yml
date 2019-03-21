@@ -1,4 +1,4 @@
-
+# This config is Default ^o^
 spring:
   rabbitmq:
     host: localhost
@@ -6,4 +6,4 @@ spring:
     password: guest
     port: 5672
 
-# 위 설정은 Default 임.
+

@@ -1,11 +1,11 @@
-package com.example.RabbitMQ.receiver;
+package com.example.RabbitMQ.provider_topic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ReceiverApplication {
+public class ProviderApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ReceiverApplication.class, args);
+        SpringApplication.run(ProviderApplication.class, args);
     }
 }
