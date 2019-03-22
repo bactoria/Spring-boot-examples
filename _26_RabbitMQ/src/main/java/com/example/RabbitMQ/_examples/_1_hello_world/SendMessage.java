@@ -1,4 +1,4 @@
-package com.example.RabbitMQ.tutorials._1_hello_world;
+package com.example.RabbitMQ._examples._1_hello_world;
 
 import com.rabbitmq.client.*;
 import java.io.IOException;
@@ -9,7 +9,7 @@ class SendMessage {
     private Channel channel;
     private Constant constant = new Constant();
 
-    public SendMessage() throws Exception {
+    protected SendMessage() throws Exception {
         ConnectionFactory factory = new ConnectionFactory();
         connection = factory.newConnection();
         channel = connection.createChannel();
@@ -19,7 +19,7 @@ class SendMessage {
 //    channel.queueBind(constant.QUEUE_NAME, constant.EXCHANGE_NAME, "black.*");
     }
 
-    public void sendMessage(String message) {
+    protected void sendMessage(String message) {
         try {
 //            channel.basicPublish(constant.EXCHANGE_NAME, "black.xxxx", MessageProperties.PERSISTENT_TEXT_PLAIN, message.getBytes("UTF-8"));
             channel.basicPublish(constant.EXCHANGE_NAME, "black.xxxx", MessageProperties.PERSISTENT_TEXT_PLAIN, message.getBytes("UTF-8"));
@@ -28,7 +28,7 @@ class SendMessage {
         }
     }
 
-    public void stopConnect() throws Exception {
+    protected void stopConnect() throws Exception {
         channel.close();
         connection.close();
     }

@@ -1,4 +1,4 @@
-package com.example.RabbitMQ.tutorials._1_hello_world;
+package com.example.RabbitMQ._examples._1_hello_world;
 
 class ReceiveApplication {
 
